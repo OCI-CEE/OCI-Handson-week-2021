@@ -633,7 +633,7 @@ Click in the **Assign** link of the *Input Parameters* Endpoint property to open
   
 You must assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor. Check the editor type (at the right of the writting part) for each value, because it could be *Static Content* and *Expression*.
 
-|Param|Value|Type||
+|Param|Value|Type|Value|
 |--|--|--|--|
 |buckerName|your Object Storage Bucket name|Static Content|vbcs-takephoto-workshop|
 |namespaceName|your Object Storage Tenancy namespace|Static Content|oractdemeaoci|
