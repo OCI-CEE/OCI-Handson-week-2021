@@ -581,7 +581,7 @@ Click **+ Variable** button to create the new variable. Write a varaible name fo
   
 ![](./images/vbs-app-evenactions-17.png)
   
-Now Click in the *Page Designer* tab to assign the new variable to the Image component. Select the **Image** component in the *Structure* tree as this component is hidden (you could select in the UI editor, but you should override the bind-if components. It's better select it in the Structure tree).
+Now Click in the *Page Designer* tab to assign the new variable to the Image component. Select the **Image** component in the *Structure* tree as this component is hidden (you could select in the UI editor, but you should override the bind-if components. It's better to select it in the Structure tree).
   
 ![](./images/vbs-app-evenactions-18.png)
   
@@ -611,7 +611,7 @@ Click in the **Save** button to save and return to the Actions editor.
   
 ![](./images/vbs-app-evenactions-23.png)
   
-Next you'll have to add a *Call Rest* action to use the **Service Connection** that you created in the last section of the workshop. This action will do a call rest to the OCI API to upload the photo to an Object Storage Bucket. If you didn't create any OCI Objetc Storage bucket at the begining of the workshop, the trainers will give you an Object Storage bucket name to use in this part of the workshop.
+Next you'll have to add a *Call Rest* action to use the **Service Connection** that you created in the last section of the workshop. This action will do a call rest to the OCI API to upload the photo to an Object Storage Bucket. The OCI Objetc Storage bucket is called vbcs-takephoto-workshop.
   
 You have to drag and drop a **Call REST** action below the *Assign Variable* action in the workflow.
   
@@ -631,20 +631,20 @@ Click in the **Assign** link of the *Input Parameters* Endpoint property to open
   
 ![](./images/vbs-app-evenactions-27.png)
   
-You must to assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor. Check the editor type (at the right of the writting part) for each value, because it could be *Static Content* and *Expression*.
+You must assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor. Check the editor type (at the right of the writting part) for each value, because it could be *Static Content* and *Expression*.
 
 |Param|Value|Type||
 |--|--|--|--|
-|buckerName|your Object Storage Bucket name|Static Content|[how to create a bucket in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20create%20Object%20Storage%20Bucket.md)|
-|namespaceName|your Object Storage Tenancy namespace|Static Content|[OS namespace in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20get%20Object%20Storage%20Namespace.md)|
+|buckerName|your Object Storage Bucket name|Static Content|vbcs-takephoto-workshop|
+|namespaceName|your Object Storage Tenancy namespace|Static Content|oractdemeaoci|
 |objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|Expression||
   
 You can click in the *uriParam* parameter to review your values. You should see an object in JSON notation.
   
 ```json
 {
- "bucketName": "your_backet_name",
- "namespaceName": "your_object_storage_namespace",
+ "bucketName": "vbcs-takephoto-workshop",
+ "namespaceName": "oractdemeaoci",
  "objectName": "{{ $page.variables.userName + \"-\" + $page.variables.photoName + \"-\" + $variables.files[0].name }}"
 }
 ```
