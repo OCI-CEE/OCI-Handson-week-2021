@@ -214,9 +214,9 @@ In this section you'll configure the components to improve the UI and user exper
 ---
   
 ## Configuring the components created.
-Now that you have created the mobile app UI layout, you have to configure the different components. Let's configure the components!!
+Now that you have created the mobile app UI layout, you have to configure the different components. This is easy, but you have to be focused! Let's go!!
 
-The photo name will be the join of the first Input Text field (User Name), the second Input Text field (Photo Name) and a random number that the phone use when you take a photo with the camera. The result should be something similar to 
+The photo name will be the join of the first Input Text field (User Name), the second Input Text field (Photo Name) and a random number that your phone automatically generates whenever you take a photo with its camera. The result should be something similar to 
 ```sh  
 userXX-photoXX-0934750743058743095.jpg
 ```
@@ -225,7 +225,7 @@ Click in the first *Text Input* component to get access the **General** componen
   
 ![](./images/vbs-app-config-01.png)
   
-In the **Label Hint** write *User Name* and keep rest of the fields as default.
+In the **Label Hint** write *User Name* and keep the rest of the fields as default.
   
 ![](./images/vbs-app-config-02.png)
 
@@ -233,11 +233,11 @@ Repeat the same steps to put **Photo Name** in the second *Input Text* field.
 
 ![](./images/vbs-app-config-03.png)
 
-Now click in the *Camera* component and in the General tab uncheck **Video** check, as you'll have to take photos only. 
+Now click in the *Camera* component and in the General tab uncheck the **Video** check, as you'll have to take photos only. 
 
 ![](./images/vbs-app-config-04.png)
   
-Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Chroming field and check *Full width* in Styling. 
+Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Chroming field and check *Full width* in Styling. Below table summarizes the values you need to have:
   
 |Field|Value|  
 |-|-|
@@ -247,7 +247,7 @@ Then click in the *Button* component inside the Camera one. Change the Text fiel
   
 ![](./images/vbs-app-config-05.png)
 
-Click in the *Image* component and put in the **Width** field the first number of pixels located in the Viewport Resolution (for Samsung Galaxy S20 is **360** pixels).
+Now, click in the *Image* component and put in the **Width** field the first number of pixels located in the Viewport Resolution (for our example with Samsung Galaxy S20 is **360** pixels, maybe for the phone model you chose, this value might be different).
   
 ![](./images/vbs-app-config-06.png)  
 </details>
