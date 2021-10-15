@@ -1,7 +1,10 @@
 
 # Welcome to the Visual Builder workshop.
-This workshop will teach you how to create a new Oracle Visual Builder mobile application, that will allow you to take a photo with the mobile camera and upload it to Oracle Cloud (OCI) Object Storage.
+This workshop will teach you how to create a progressive mobile application, that will allow you to take photos with your mobile camera and upload it instantaneously to Oracle Cloud Object Storage.
 
-You probably don’t need it, but if you want to take a look you can find a detailed manual for Visual Builder [here](https://docs.oracle.com/en/cloud/paas/app-builder-cloud/visual-builder-developer/index.html)
+Oracle Visual Builder is a Low Code platform that uses a simplified interface and lets developers build applications and software that is both user-friendly and responsive. Rather than writing several lines of complex code and language structure, you can quickly and easily utilize Low Code and drag-and-drop the pieces you’ll need to construct total applications with user interfaces, security, combinations and information. 
+Have fun developing your mobile app and upload some cool photos!
 
-Start [here](https://github.com/OCI-CEE/OCI-Handson-week-2021/blob/main/LAB-04/00/readme.md)
+# Duration: +/- 2 hours
+
+# Start [here](https://github.com/OCI-CEE/OCI-Handson-week-2021/blob/main/LAB-04/00/readme.md)
