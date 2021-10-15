@@ -461,11 +461,11 @@ If you receive an alert requestMessages, please avoid it and click in **Finish**
 --- 
 Almost all components in Visual Builder have an *Event Handler*. You can create events of different types for the components, like a click event for a button or something like that. When you trigger an event you have to create an *Action Chain* for that event. An action chain determines what happens when, for example, you click a button on a page. An action chain might be a short sequence of a few actions, but it could contain many actions as well as logic for determining what happens in the sequence.
   
-You'll practice about how to create events and action chains for that events. You'll create an **Action Chain** in the Take Photo button when you click the button. In the action chain you'll use the *Service Connection*, created in the last section, to connect via REST API to the OCI Object Storage Service.
+You'll practice how to create events and action chains for that events. You'll create an **Action Chain** in the Take Photo button when you click the button. In the action chain you'll use the *Service Connection*, created in the last section, to connect via REST API to the OCI Object Storage Service.
 ---
   
 ### Component Events & Actions
-You'll create action chains by assembling simple, individual actions into a sequence in the Action Chain editor. The Camera component is special as it consist of a *File Picker* component that it has tied a *Button* (with an icon) component. You will have to create an *ojSelect* event in the File Picker that will trigger the appropiate *Action Chain*. When you click the button, it will trigger the  action chain related to *ojSelect* event in the File Picker component, not in the button. Let's create the take photo action chain.
+You'll create action chains by assembling simple, individual actions into a sequence in the Action Chain editor. The Camera component is special as it consists of a *File Picker* component that it has tied a *Button* (with an icon) component. You will have to create an *ojSelect* event in the File Picker that will trigger the appropiate *Action Chain*. When you click the button, it will trigger the  action chain related to *ojSelect* event in the File Picker component, not in the button. Let's create the take photo action chain.
   
 Click in the **Camera (File Picker)** component in the *Components* tree (remember that you have to create the trigger and the action chain in the File Picker component not in the tied button). Next click in the **Events** Tab in *Properties*.  
   
@@ -475,7 +475,7 @@ As you can see, you don't have any *Event* in the File Picker component. Click i
   
 ![](./images/vbs-app-evenactions-02.png)
   
-Now you should be in the *Action Chain Editor*. You can see the name of the Action, something like *CameraFilePickerSelectChain*. For academical reasons, you'll create an *If* logic action to verify that the userName and photoName components values are different that empty. You create before the *if-bind* components to verify those conditions, but you can practice here with *if-logic* action to compare with *if-bind* component.
+Now you should be in the *Action Chain Editor*. You can see the name of the Action, something like *CameraFilePickerSelectChain*. For academical reasons, you'll create an *If* logic action to verify that the userName and photoName components values are different from empty. You create before the *if-bind* components to verify those conditions, but you can practice here with *if-logic* action to compare with *if-bind* component.
   
 Drag and Drop the **if** *logic* action as your first action in the action chain.
   
@@ -501,11 +501,11 @@ Drag and Drop a **Fire Notification** action to the false branch.
   
 ![](./images/vbs-app-evenactions-06.gif)
   
-Click in the *Fire Notification* action to select it. In the Summary field you could write something like ```NoUserPhotoName```. Then in the Message field you can write some descriptive message like ```No file name correctly defined.``` or whatever other message that you can put on the screen when the **if-logic** action is **FALSE**. 
+Click in the *Fire Notification* action to select it. In the Summary field you could write something like ```NoUserPhotoName```. Then in the Message field you can write some descriptive message like ```No file name correctly defined.``` or any other descriptive message to put on the screen when the **if-logic** action is **FALSE**. 
   
 ![](./images/vbs-app-evenactions-07.png)
   
-You could create a more elaborated message like:
+You don't have to but an even more elaborated message could be something like:
   
 ```
   "No file name correctly defined. userName: " + $page.variables.userName + " photoName: " + $page.variables.photoName
@@ -529,7 +529,7 @@ Next click in the *Go to Module Function* link below the *Function Name* field t
   
 ![](./images/vbs-app-evenactions-12.png)
   
-This function will be used to convert the photo taken in your mobile phone as a *BLOB* object type to a *FILE* type. This js function will convert the blob/image to base64 string (data) and it'll create an URL to use in the **Image** component that you put in the mobile UI at the begining of the workshop. If you try to put the blob directly in the *Image* component you won't have anything as blob type is an incompatible object type for that component.
+This function will be used to convert the photo taken in your mobile phone as a *BLOB* object type to a *FILE* type. This js function will convert the blob/image to base64 string (data) and it'll create an URL to use in the **Image** component that you put in the mobile UI at the begining of the workshop. If you try to put the blob directly in the *Image* component you won't have anything as a blob type is an incompatible object type for that component.
   
 Now you have to copy and paste the next javascript code in the *JavaScript* editor.
   
@@ -577,7 +577,7 @@ Create the new variable imageURL. Click in *Variables* tab in the main menu edit
   
 ![](./images/vbs-app-evenactions-16.png)
   
-Click **+ Variable** button to create the new variable. Write a varaible name for the URL, like *imageURL* of **String** type. Then Click in **New** Button to create the new variable.
+Click **+ Variable** button to create the new variable. Write a varaible name for the URL, like *imageURL* of **String** type. Then Click in **Create** Button to create the new variable.
   
 ![](./images/vbs-app-evenactions-17.png)
   
