@@ -344,12 +344,12 @@ If you change the Temporary Override Value to **True** in both **Bind-If** compo
 --- 
 To work with an external service's REST API, Visual Builder needs basic information about that service. A service connection provides this information by describing the connection to the service, including connection details, properties, and the REST endpoints provided by the service that you want to use in your application.
   
-You'll have to create a connection to Oracle Cloud Infrastructure (OCI) to upload your photos or files in general to an Object Storage Bucket. To do that you'll have to configure a Service connection component that you'll use during the actions creation (described in the next section). Let's create the API REST Service connection before the events and actions creation as you'll have to use the API REST in those actions.
+You'll have to create a connection to Oracle Cloud Infrastructure (OCI) to upload your photos to an Object Storage Bucket. To do that you'll have to configure a Service connection component that you'll use during the actions creation (described in the next section). Let's create the API REST Service connection before the events and actions creation as you'll have to use the API REST in those actions.
     
 ---
   
 ### Creating the API REST Service Connection.
-You can create service connections to REST services that support both the OpenAPI 3.0 and Swagger 2.0 specifications. If you remember, you have an user API Key. This API Key will be used in this section to create the Service Connection component, if you don't have any API Key you won't be able to connect to OCI API REST because you will receive an Unathorized connection error (401). To create the Service Connection please follow next steps.
+You can create service connections to REST services that support both the OpenAPI 3.0 and Swagger 2.0 specifications. If you remember, you have an user API Key that you created in the first step of this workshop. This API Key will be used in this section to create the Service Connection component, if you don't have any API Key you won't be able to connect to OCI API REST because you will receive an Unathorized connection error (401). To create the Service Connection please follow next steps.
 
 Click in Service Connection icon in the visual builder left main menu. Then Click **+Service Connection** button to create a new Service Connection.
   
@@ -363,7 +363,7 @@ Now you must put the OCI Object Storage endpoint according to your region. The t
  ```
  https://objectstorage.eu-frankfurt-1.oraclecloud.com
  ```
-> Note: you could create your own Object Storage Bucket in your OCI Tenancy, following the next [tutorial](). If you create your own Object Storage Bucket you have to use the appropiate [endpoint](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/) according to the region in which you create the bucket.
+
   
 Copy and paste your Object Storage endpoint in the **URL** field. Then change the **Method** to *PUT*. Action Hint should be *Create*. Then click **Next** to continue with the creation.
   
@@ -383,7 +383,7 @@ Select **Oracle Cloud Infrastructure API Signature 1.0** as authentification met
   
 ![](./images/vbs-app-servicecon-05.png)
   
-Then click in the pencil icon near *Enter API Key and private key*, to config the authetication wuth the API Key. If you create your own API Key credentials at the beggining of the workshop you can use them now. On the other hand if you didn't create any API Key credentials, the trainers will give you ones to create the API Key ID for the Service Connection.
+Then click in the pencil icon near *Enter API Key and private key*, to config the authentication with the API Key. If you create your own API Key credentials at the beggining of the workshop you can use them now.
   
 ![](./images/vbs-app-servicecon-06.png)
   
@@ -403,7 +403,7 @@ Next you must change the *Connection Type* to **Always use proxy, irrespective o
   
 ![](./images/vbs-app-servicecon-08.png)
   
-The app will ask your user name and password every time you access it. To allow anonymous access (to avoid introduce your credentials every time) you must check **Allow anonymous access to the service connection infrastructure**. Then Select **Same as Authenticated User** from the *Authentication for Anonymous Users* list. This method will be the same as autehnticated users, that is the API Key method that configured before.
+The app will ask your user name and password every time you access it. To allow anonymous access (to avoid introduce your credentials every time) you must check **Allow anonymous access to the service connection infrastructure**. Then Select **Same as Authenticated User** from the *Authentication for Anonymous Users* list. This method will be the same as authenticated users, that is the API Key method that configured before.
   
 ![](./images/vbs-app-servicecon-09.png)
   
@@ -415,7 +415,7 @@ To complete the PUT Request, you must add next values to the end of the *URL* fi
 ```
   n/{namespaceName}/b/{bucketName}/o/{objectName}
 ```
-When you add this values you should see three new Parameters in the window, one for each value. All of them must be required and *String* type. You could use whichever default values you want, as they will be change in an Action call in the mobile app. For example
+When you add this values you should see three new Parameters in the window, one for each value. All of them must be required and *String* type. You could use whichever default values you want, as they will be changed in an Action call in the mobile app. For example
   
 |Parameter|Value|
 |-|-|
@@ -425,7 +425,7 @@ When you add this values you should see three new Parameters in the window, one 
 
 ![](./images/vbs-app-servicecon-11.png)
 
-Now you migth test the connection, but unfortunately you should add headers with the content lenght and the correct parameters in the Request call. To simplify this process, you'll create a dummy Test to check the network connectivity but not the API functionality.
+Now you may test the connection, but unfortunately you should add headers with the content lenght and the correct parameters in the Request call. To simplify this process, you'll create a dummy Test to check the network connectivity but not the API functionality.
 
 Click in the **Body** tab and write a dummy text in the *Example* text area, something like ```this is a test```. Change the *Media Type* to **application/x-www-form-urlencoded** or **multipart/form-data**.
   
@@ -437,7 +437,7 @@ Then click in the **Test** tab. You could configure here a real test if you had 
   
 Then click **Send Request** button to send an "invalid" (wrong values) Request, but is useful to validate the endpoint conectivity even with an error response (you are validating the conectivity with the OCI service, not the object creation, that it will be invalid as you didn't use valid values and headers at this moment).
   
-You might receive a status 400 and an error message (don't worry about that it's normal, remember this it only to test the connectivity with the cloud service not the functionality)
+You'll probably receive an http status 400 with an error message (don't worry about that it's normal, remember this is only to test the connectivity not the functionality)
 ```json
 {
     "type": "abcs://proxy_problem/signing/missingHeader",
