@@ -816,4 +816,6 @@ Finally test the application writing your name, a name for the photo and take a 
   
 ![](./images/vbs-app-test-11.gif)
   
+Enjoy your app! 
+Thank you!
 </details>
