@@ -95,14 +95,12 @@ Then in **Organization**, select the *Project* -> **VisualBuilder-Workshop-Polan
   
 ![](./images/oci-vbs-03.png)
   
-Select *Workspaces* in the left menu to get all the workspaces in the project. Then select the appropiate workspace asigned to you by the trainer. In this tutorial, you will see that the screenshots show *userXX*, but you will have to change XX with your user number.
-> Note: if the trainer asign you the numbre 01 or user01, your workspace will be something like **workspace-user01**.
-  
-All trainees will use their own git repository tied to their own workspace.
+Select *Workspaces* in the left menu to get all the workspaces in the project. Then select the appropiate workspace asigned to you by the trainer. You shoud be able to see the workspaces assigned to you (make sure **mine** is selected and not others).
+> Note: Unless the lab instructor explains to you differently, in theory your workspace should be something like **YourName-workspace**.
   
 ![](./images/oci-vbs-04.png)
   
-Wait a couple of second to access to your workspace. You should see the *Welcome to your Workspace* page.
+Click your Workspace and wait a couple of seconds to access it. You should see the *Welcome to your Workspace* page.
   
 ![](./images/oci-vbs-05.png)
     
