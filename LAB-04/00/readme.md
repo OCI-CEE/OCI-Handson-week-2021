@@ -258,16 +258,12 @@ Now, click in the *Image* component and put in the **Width** field the first num
   
 You can use a **bind-if** component to conditionally show or hide UI components in your visual application. Use **bind-if** to surround other components and set conditions to determine whether the components should be displayed on a page. In this lab you'll configure two **bind-if** components, one for each *Input Text* value. To manage the value of the **Input Text** components you'll have to create variables. These variables will be used in the events and actions to those events in future steps.
   
-> Note: For academic reasons and to facilitate the creation of the mobile UI, the **bind-if** components were created before adding the components affected by them. To use an **bind-if** component to control when a component is displayed in a page after you added it: In **Design** mode, locate the component that you want to control dynamically. *Right-click* the component on the canvas or in the *Structure* view and select **Surround > If** in the popup menu. 
-  
-![](./images/vbs-app-surround-01.png)  
-  
 ---
   
 ### Manage Component Visibility Using Conditions and Variables
 Before the **Bind-If** configuration, you'll have to create several variables to store the *Input Text* value. Let's create the variables and then you can create the rules to control de visibility of the components.
   
-Click **Variables** in the main-start tab to get access to the variables configuration window. You shouldn't have any variable created yet. Click **+ Variable** to create the first variable for you main-start page.
+Click **Variables** in the main-start tab to get access to the variables configuration window. You shouldn't have any variables created yet. Click **+ Variable** to create the first one for you main-start page.
   
 ![](./images/vbs-app-visibility-01.png)  
   
@@ -275,11 +271,11 @@ Write a variable name like **userName** in the *ID* field and keep **String** as
   
 ![](./images/vbs-app-visibility-02.png)
   
-Repeat the last step and write a variable name like **photoName** in the *ID* field and keep **String** as variable *Type*. This time click in **Create** button as you don't have to create other variable right now.
+Repeat the last step and write a variable name like **photoName** in the *ID* field and keep **String** as variable *Type*. This time click in **Create** button as you don't have to create another variable right now.
   
 ![](./images/vbs-app-visibility-03.png)
   
-Now you have to link this two variables with each **Input Text** components. Click in **Page Designer** again to return to the Design window and Select the *User Name* **Input Text** but **Data** tab properties instead of General one.
+Now you have to link these two variables with each **Input Text** components. Click in **Page Designer** again to return to the Design window and Select the *User Name* **Input Text** but **Data** tab properties instead of General one.
   
 ![](./images/vbs-app-visibility-04.png)
   
@@ -337,7 +333,7 @@ You will notice too that the **Bind-if** components have a **Temporary Override*
   
 ![](./images/vbs-app-visibility-13.png)  
   
-If you change the Temporary Override Value to **True** in both **Bind-If** components, you can see how the surrounded **Grid Row** and its children (in the structure tree) will be shown in the Design window. After testing it, please you don't forget to switch the Temporary Override to **Off** value to avoid issues. Anyway you will be advice with an orange mark that your **Bind-If** components are overridden.
+If you change the Temporary Override Value to **True** in both **Bind-If** components, you can see how the surrounded **Grid Row** and its children (in the structure tree) will be shown in the Design window. After testing it, please  don't forget to switch the Temporary Override to **Off** value to avoid issues. Anyway you will be advised with an orange mark that your **Bind-If** components are overridden.
   
 ![](./images/vbs-app-visibility-14.gif)  
   
