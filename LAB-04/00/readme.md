@@ -167,7 +167,7 @@ Now you will add other **Input Text** but you'll drop it in the Structure menu i
   
 ![](./images/vbs-app-11.gif)
   
-Next you will add a **Horizontal Rule** from *Layout* components to the Design window.
+Next you will add a **Horizontal Rule** from *Layout* components to the **Form Layout** in the Design window.
   
 ![](./images/vbs-app-12.png)
   
