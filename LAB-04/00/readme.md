@@ -91,20 +91,20 @@ Next you have to click in the VBS instance **menu icon** and click in the **Acce
   
 ![](./images/oci-vbs-02.png)  
  
-Then in **Organization**, select the *Project* -> **VisualBuilder-Workshop-Poland** that you will use for this workshop. 
+Then in **Organization**, select the *Project* -> **Workshop-VBCS-Takephoto** that you will use for this workshop. 
   
 ![](./images/oci-vbs-03.png)
   
-Select *Workspaces* in the left menu to get all the workspaces in the project. Then select the appropiate workspace asigned to you by the trainer. You shoud be able to see the workspaces assigned to you (make sure **mine** is selected and not others).
-> Note: Unless the lab instructor explains to you differently, in theory your workspace should be something like **YourName-workspace**.
+Select *Workspaces* in the left menu to get all the workspaces in the project. Then select the appropiate workspace asigned to you by the trainer. In this tutorial, you will see that the screenshots show *userXX*, but you will have to change XX with your user number.
+> Note: if the trainer asign you the numbre 01 or user01, your workspace will be something like **workspace-user01**.
+  
+All trainees will use their own git repository tied to their own workspace.
   
 ![](./images/oci-vbs-04.png)
   
-Click your Workspace and wait a couple of seconds to access it. You should see the *Welcome to your Workspace* page.
+Wait a couple of second to access to your workspace. You should see the *Welcome to your Workspace* page.
   
 ![](./images/oci-vbs-05.png)
-
-Congratulations! You're inside your Visual Builder Workspace! Now is when the fun begins!
     
 </details>
 </details>
@@ -112,7 +112,7 @@ Congratulations! You're inside your Visual Builder Workspace! Now is when the fu
   <summary>3.- Creating a Mobile App in Visual Builder (click to show)</summary>
   
 ---
-In this section you will create a mobile application with Visual Builder low coding programing. This application will have several components such as an API REST connection to Oracle Cloud Object Storage bucket to storage your photos or files, a mobile layout with input fields and button to take the photo, a workflow triggered by the button event handler and more. At the end of the section you will be able to take a photo with your mobile phone and upload it to an OCI Object Storage bucket. Its a simple, but funny exercise!
+In this section you will create a mobile application with Visual Builder low coding programing. This application will have several components like an API REST connection to Oracle Cloud Object Storage bucket to storage your photos or files, a mobile layout with input fields and button to take the photo, a workflow triggered by the button event handler and more. At the end of the section you will can take a photo with your mobile phone and upload it to an OCI Object Storage bucket.
  
 ---
   
@@ -127,11 +127,11 @@ Now you will create the mobile layout adding several components that you will us
   
 ![](./images/vbs-app-01.png)
   
-In *General Information* you should write a descriptive name for your mobile app, like **MyMobilePhotoUpload_UserXX**. Replace **UserXX** with your name for example. Then select **none** as mobile layout app, because in this workshop we won't create a navigation menu for the app as it has only one screen. Finally click **Next** button to continue.
+In *General Information* you must to write a descriptive name for your mobile app, like **MyMobilePhotoUpload_UserXX**. Then select none as mobile layout app, because in this workshop we won't create a navigation menu for the app as it has only one screen. Finally click **Next** button to continue.
   
 ![](./images/vbs-app-02.png)
   
-Keep **Custom** layout selected (empty layout) and click the **Create** button to create you mobile app.
+Keep **Custom** layout selected (empty layout) and click **Create** button to create you mobile app.
   
 ![](./images/vbs-app-03.png)
 
@@ -139,7 +139,7 @@ Now you should have created the visual builder mobile application environtment/s
   
 ![](./images/vbs-app-04.png)
   
-You can change the mobile appearance (eg. iphone, google pixel, samsung or tablet), show or hide the bezel or even change the mobile size and format. In this tutorial we select the Samsung Galaxy S20 layout but feel free to  select whatever you want (keep in mind that the default layout is iphone).
+You can change the mobile appearance (iphone, google pixel, samsung or tablet), show or hide the bezel or change the mobile size. In the tutorial we select Samsung Galaxy S20 layout, but you can select whatever you want (default layout is for iphone mobile phones).
   
 ![](./images/vbs-app-05.png)
   
@@ -163,7 +163,7 @@ Scroll up or search an **Input Text** component and drag and drop to the Design 
   
 ![](./images/vbs-app-10.gif)
   
-Now you will add another **Input Text** but you'll drop it in the Structure menu instead of drop it over the Design window. Drag and Drop over the Structure menu gives you more control when you are creating the mobile layout.
+Now you will add other **Input Text** but you'll drop it in the Structure menu instead of drop it over the Design window. Drag and Drop over the Structure menu gives you more control when you are creating the mobile layout.
   
 ![](./images/vbs-app-11.gif)
   
@@ -172,26 +172,26 @@ Next you will add a **Horizontal Rule** from *Layout* components to the Design w
 ![](./images/vbs-app-12.png)
   
 Now you have to scroll down and add an **If** component from *Layout* menu to the Structure tree. 
-> Note: This component will allow you to compose match rules to create different behaviours according to those rules. In this workshop you will use the **If** component to show or hide the *take photo button*, that you'll have to add to the Design window in the next steps.
+> Note: This component will allow you to compose match rules to create different behaviours according to that rules. In this workshop you will use the **If** component to show or hide the *take photo button*, that you'll have to add to the Design window in next steps.
   
 ![](./images/vbs-app-13.gif)
   
-Add another **If** component more to the *Structure tree*, but this time you have to add it inside (nested) the last *If* that you created before.
+Add other **If** component more to the *Structure tree*, but this time you have to add it inside (nested) the last *If* that you created before.
 > Note: You have to create two nested if components, one for each **Input Text** added before.
 
 ![](./images/vbs-app-14.gif)
   
 Next you have to add a **Grid Container** component from *Layout* menu, nested to the last *if* component in the *Structure* tree. Drag the **Grid Container** component and drop it inside the last **Bind If**.
-> Note: The Grid Container (show as *Grid Row* in the Structure tree) will contain the next components that you have to create and you'll use it to show or hide its content according to the match rules that you will create in the *If* components in future steps.
+> Note: The Grid Container (show as *Grid Row* in the Structure tree) will contain the next components that you have to crete and you'll use it to show or hide its content according to the match rules that you will create in the *If* components in future steps.
   
 ![](./images/vbs-app-15.png)
   
 Now you have to add a **Camera** Component from *Common* menu, nested to the Grid Row that you create in the last step.
-> Note: The Camera component is made up of three components: a **File Picker** and a **Button** with an **Icon**. The File Picker component will have a special behaviour as the action that it will execute, will be triggered by the button instead of the File Picker component.
+> Note: The Camera component is made up of three components: a **File Picker** and a **Button** with an **Icon**. The File Picker component will have a special behaviour as the action that it will execute, will be triggered by the button instead of the own File Picker component.
   
 ![](./images/vbs-app-16.gif)
   
-Next add another **Horizontal Rule** component from *Layout* components menu as a separator. You must drag the **Horizontal Rule** and drop inside the **Camera** component in the *Structure* tree.
+Next add other **Horizontal Rule** component from *Layout* components menu as a separator. You must drag the **Horizontal Rule** and drop inside the **Camera** component in the *Structure* tree.
   
 ![](./images/vbs-app-17.gif)
   
@@ -199,7 +199,7 @@ Last Layout component will be an **Image** one. Drag the **Image** component fro
   
 ![](./images/vbs-app-18.gif)
 
-At this point you should have a Structure tree similar to the next screenshot. Make sure your structure is similar to what you see in the screenshot. You can always move components in the Structure tree if your layout structure looks different.
+Now you should have a Structure tree similar to the next screenshot. You can move components in the Structure tree if your layout structure is different.
   
 ![](./images/vbs-app-19.png)
   
@@ -214,9 +214,9 @@ In this section you'll configure the components to improve the UI and user exper
 ---
   
 ## Configuring the components created.
-Now that you have created the mobile app UI layout, you have to configure the different components. This is easy, but you have to be focused! Let's go!!
+Now that you have created the mobile app UI layout, you have to configure the different components. Let's configure the components!!
 
-The photo name will be the join of the first Input Text field (User Name), the second Input Text field (Photo Name) and a random number that your phone automatically generates whenever you take a photo with its camera. The result should be something similar to 
+The photo name will be the join of the first Input Text field (User Name), the second Input Text field (Photo Name) and a random number that the phone use when you take a photo with the camera. The result should be something similar to 
 ```sh  
 userXX-photoXX-0934750743058743095.jpg
 ```
@@ -225,7 +225,7 @@ Click in the first *Text Input* component to get access the **General** componen
   
 ![](./images/vbs-app-config-01.png)
   
-In the **Label Hint** write *User Name* and keep the rest of the fields as default.
+In the **Label Hint** write *User Name* and keep rest of the fields as default.
   
 ![](./images/vbs-app-config-02.png)
 
@@ -233,11 +233,11 @@ Repeat the same steps to put **Photo Name** in the second *Input Text* field.
 
 ![](./images/vbs-app-config-03.png)
 
-Now click in the *Camera* component and in the General tab uncheck the **Video** check, as you'll have to take photos only. 
+Now click in the *Camera* component and in the General tab uncheck **Video** check, as you'll have to take photos only. 
 
 ![](./images/vbs-app-config-04.png)
   
-Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Chroming field and check *Full width* in Styling. Below table summarizes the values you need to have:
+Then click in the *Button* component inside the Camera one. Change the Text field deleting the **/Video** part. Then Select **Call to Action** in the Chroming field and check *Full width* in Styling. 
   
 |Field|Value|  
 |-|-|
@@ -247,7 +247,7 @@ Then click in the *Button* component inside the Camera one. Change the Text fiel
   
 ![](./images/vbs-app-config-05.png)
 
-Now, click in the *Image* component and put in the **Width** field the first number of pixels located in the Viewport Resolution (for our example with Samsung Galaxy S20 is **360** pixels, maybe for the phone model you chose, this value might be different).
+Click in the *Image* component and put in the **Width** field the first number of pixels located in the Viewport Resolution (for Samsung Galaxy S20 is **360** pixels).
   
 ![](./images/vbs-app-config-06.png)  
 </details>
@@ -258,12 +258,16 @@ Now, click in the *Image* component and put in the **Width** field the first num
   
 You can use a **bind-if** component to conditionally show or hide UI components in your visual application. Use **bind-if** to surround other components and set conditions to determine whether the components should be displayed on a page. In this lab you'll configure two **bind-if** components, one for each *Input Text* value. To manage the value of the **Input Text** components you'll have to create variables. These variables will be used in the events and actions to those events in future steps.
   
+> Note: For academic reasons and to facilitate the creation of the mobile UI, the **bind-if** components were created before adding the components affected by them. To use an **bind-if** component to control when a component is displayed in a page after you added it: In **Design** mode, locate the component that you want to control dynamically. *Right-click* the component on the canvas or in the *Structure* view and select **Surround > If** in the popup menu. 
+  
+![](./images/vbs-app-surround-01.png)  
+  
 ---
   
 ### Manage Component Visibility Using Conditions and Variables
 Before the **Bind-If** configuration, you'll have to create several variables to store the *Input Text* value. Let's create the variables and then you can create the rules to control de visibility of the components.
   
-Click **Variables** in the main-start tab to get access to the variables configuration window. You shouldn't have any variables created yet. Click **+ Variable** to create the first one for you main-start page.
+Click **Variables** in the main-start tab to get access to the variables configuration window. You shouldn't have any variable created yet. Click **+ Variable** to create the first variable for you main-start page.
   
 ![](./images/vbs-app-visibility-01.png)  
   
@@ -271,11 +275,11 @@ Write a variable name like **userName** in the *ID* field and keep **String** as
   
 ![](./images/vbs-app-visibility-02.png)
   
-Repeat the last step and write a variable name like **photoName** in the *ID* field and keep **String** as variable *Type*. This time click in **Create** button as you don't have to create another variable right now.
+Repeat the last step and write a variable name like **photoName** in the *ID* field and keep **String** as variable *Type*. This time click in **Create** button as you don't have to create other variable right now.
   
 ![](./images/vbs-app-visibility-03.png)
   
-Now you have to link these two variables with each **Input Text** components. Click in **Page Designer** again to return to the Design window and Select the *User Name* **Input Text** but **Data** tab properties instead of General one.
+Now you have to link this two variables with each **Input Text** components. Click in **Page Designer** again to return to the Design window and Select the *User Name* **Input Text** but **Data** tab properties instead of General one.
   
 ![](./images/vbs-app-visibility-04.png)
   
@@ -333,7 +337,7 @@ You will notice too that the **Bind-if** components have a **Temporary Override*
   
 ![](./images/vbs-app-visibility-13.png)  
   
-If you change the Temporary Override Value to **True** in both **Bind-If** components, you can see how the surrounded **Grid Row** and its children (in the structure tree) will be shown in the Design window. After testing it, please  don't forget to switch the Temporary Override to **Off** value to avoid issues. Anyway you will be advised with an orange mark that your **Bind-If** components are overridden.
+If you change the Temporary Override Value to **True** in both **Bind-If** components, you can see how the surrounded **Grid Row** and its children (in the structure tree) will be shown in the Design window. After testing it, please you don't forget to switch the Temporary Override to **Off** value to avoid issues. Anyway you will be advice with an orange mark that your **Bind-If** components are overridden.
   
 ![](./images/vbs-app-visibility-14.gif)  
   
@@ -344,12 +348,12 @@ If you change the Temporary Override Value to **True** in both **Bind-If** compo
 --- 
 To work with an external service's REST API, Visual Builder needs basic information about that service. A service connection provides this information by describing the connection to the service, including connection details, properties, and the REST endpoints provided by the service that you want to use in your application.
   
-You'll have to create a connection to Oracle Cloud Infrastructure (OCI) to upload your photos to an Object Storage Bucket. To do that you'll have to configure a Service connection component that you'll use during the actions creation (described in the next section). Let's create the API REST Service connection before the events and actions creation as you'll have to use the API REST in those actions.
+You'll have to create a connection to Oracle Cloud Infrastructure (OCI) to upload your photos or files in general to an Object Storage Bucket. To do that you'll have to configure a Service connection component that you'll use during the actions creation (described in the next section). Let's create the API REST Service connection before the events and actions creation as you'll have to use the API REST in those actions.
     
 ---
   
 ### Creating the API REST Service Connection.
-You can create service connections to REST services that support both the OpenAPI 3.0 and Swagger 2.0 specifications. If you remember, you have an user API Key that you created in the first step of this workshop. This API Key will be used in this section to create the Service Connection component, if you don't have any API Key you won't be able to connect to OCI API REST because you will receive an Unathorized connection error (401). To create the Service Connection please follow next steps.
+You can create service connections to REST services that support both the OpenAPI 3.0 and Swagger 2.0 specifications. If you remember, you have an user API Key. This API Key will be used in this section to create the Service Connection component, if you don't have any API Key you won't be able to connect to OCI API REST because you will receive an Unathorized connection error (401). To create the Service Connection please follow next steps.
 
 Click in Service Connection icon in the visual builder left main menu. Then Click **+Service Connection** button to create a new Service Connection.
   
@@ -359,11 +363,11 @@ A new Service Connection wizard should be opened. Select *Define by Endpoint* op
   
 ![](./images/vbs-app-servicecon-02.png)
   
-Now you must put the OCI Object Storage endpoint according to your region. The trainers of the workshop will give you the appropiate endpoint. In this tutorial we'll use the frackfurt endpoint, but this endpoint could change in other worshops, please ask the trainers about the endpoint if they didn't give you one.
+Now you must put the OCI Object Storage endpoint according to your region. The trainers of the workshop will give you the appropiate endpoint. In this tutorial we'll use the frankfurt endpoint, but this endpoint could change in other worshops, please ask the trainers about the endpoint if they didn't give you one.
  ```
  https://objectstorage.eu-frankfurt-1.oraclecloud.com
  ```
-
+> Note: you could create your own Object Storage Bucket in your OCI Tenancy, following the next [tutorial](). If you create your own Object Storage Bucket you have to use the appropiate [endpoint](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/) according to the region in which you create the bucket.
   
 Copy and paste your Object Storage endpoint in the **URL** field. Then change the **Method** to *PUT*. Action Hint should be *Create*. Then click **Next** to continue with the creation.
   
@@ -383,7 +387,7 @@ Select **Oracle Cloud Infrastructure API Signature 1.0** as authentification met
   
 ![](./images/vbs-app-servicecon-05.png)
   
-Then click in the pencil icon near *Enter API Key and private key*, to config the authentication with the API Key. If you create your own API Key credentials at the beggining of the workshop you can use them now.
+Then click in the pencil icon near *Enter API Key and private key*, to config the authetication wuth the API Key. If you create your own API Key credentials at the beggining of the workshop you can use them now. On the other hand if you didn't create any API Key credentials, the trainers will give you ones to create the API Key ID for the Service Connection.
   
 ![](./images/vbs-app-servicecon-06.png)
   
@@ -403,7 +407,7 @@ Next you must change the *Connection Type* to **Always use proxy, irrespective o
   
 ![](./images/vbs-app-servicecon-08.png)
   
-The app will ask your user name and password every time you access it. To allow anonymous access (to avoid introduce your credentials every time) you must check **Allow anonymous access to the service connection infrastructure**. Then Select **Same as Authenticated User** from the *Authentication for Anonymous Users* list. This method will be the same as authenticated users, that is the API Key method that configured before.
+The app will ask your user name and password every time you access it. To allow anonymous access (to avoid introduce your credentials every time) you must check **Allow anonymous access to the service connection infrastructure**. Then Select **Same as Authenticated User** from the *Authentication for Anonymous Users* list. This method will be the same as autehnticated users, that is the API Key method that configured before.
   
 ![](./images/vbs-app-servicecon-09.png)
   
@@ -415,7 +419,7 @@ To complete the PUT Request, you must add next values to the end of the *URL* fi
 ```
   n/{namespaceName}/b/{bucketName}/o/{objectName}
 ```
-When you add this values you should see three new Parameters in the window, one for each value. All of them must be required and *String* type. You could use whichever default values you want, as they will be changed in an Action call in the mobile app. For example
+When you add this values you should see three new Parameters in the window, one for each value. All of them must be required and *String* type. You could use whichever default values you want, as they will be change in an Action call in the mobile app. For example
   
 |Parameter|Value|
 |-|-|
@@ -425,7 +429,7 @@ When you add this values you should see three new Parameters in the window, one 
 
 ![](./images/vbs-app-servicecon-11.png)
 
-Now you may test the connection, but unfortunately you should add headers with the content lenght and the correct parameters in the Request call. To simplify this process, you'll create a dummy Test to check the network connectivity but not the API functionality.
+Now you migth test the connection, but unfortunately you should add headers with the content lenght and the correct parameters in the Request call. To simplify this process, you'll create a dummy Test to check the network connectivity but not the API functionality.
 
 Click in the **Body** tab and write a dummy text in the *Example* text area, something like ```this is a test```. Change the *Media Type* to **application/x-www-form-urlencoded** or **multipart/form-data**.
   
@@ -437,7 +441,7 @@ Then click in the **Test** tab. You could configure here a real test if you had 
   
 Then click **Send Request** button to send an "invalid" (wrong values) Request, but is useful to validate the endpoint conectivity even with an error response (you are validating the conectivity with the OCI service, not the object creation, that it will be invalid as you didn't use valid values and headers at this moment).
   
-You'll probably receive an http status 400 with an error message (don't worry about that it's normal, remember this is only to test the connectivity not the functionality)
+You might receive a status 400 and an error message (don't worry about that it's normal, remember this it only to test the connectivity with the cloud service not the functionality)
 ```json
 {
     "type": "abcs://proxy_problem/signing/missingHeader",
@@ -461,11 +465,11 @@ If you receive an alert requestMessages, please avoid it and click in **Finish**
 --- 
 Almost all components in Visual Builder have an *Event Handler*. You can create events of different types for the components, like a click event for a button or something like that. When you trigger an event you have to create an *Action Chain* for that event. An action chain determines what happens when, for example, you click a button on a page. An action chain might be a short sequence of a few actions, but it could contain many actions as well as logic for determining what happens in the sequence.
   
-You'll practice how to create events and action chains for that events. You'll create an **Action Chain** in the Take Photo button when you click the button. In the action chain you'll use the *Service Connection*, created in the last section, to connect via REST API to the OCI Object Storage Service.
+You'll practice about how to create events and action chains for that events. You'll create an **Action Chain** in the Take Photo button when you click the button. In the action chain you'll use the *Service Connection*, created in the last section, to connect via REST API to the OCI Object Storage Service.
 ---
   
 ### Component Events & Actions
-You'll create action chains by assembling simple, individual actions into a sequence in the Action Chain editor. The Camera component is special as it consists of a *File Picker* component that it has tied a *Button* (with an icon) component. You will have to create an *ojSelect* event in the File Picker that will trigger the appropiate *Action Chain*. When you click the button, it will trigger the  action chain related to *ojSelect* event in the File Picker component, not in the button. Let's create the take photo action chain.
+You'll create action chains by assembling simple, individual actions into a sequence in the Action Chain editor. The Camera component is special as it consist of a *File Picker* component that it has tied a *Button* (with an icon) component. You will have to create an *ojSelect* event in the File Picker that will trigger the appropiate *Action Chain*. When you click the button, it will trigger the  action chain related to *ojSelect* event in the File Picker component, not in the button. Let's create the take photo action chain.
   
 Click in the **Camera (File Picker)** component in the *Components* tree (remember that you have to create the trigger and the action chain in the File Picker component not in the tied button). Next click in the **Events** Tab in *Properties*.  
   
@@ -475,7 +479,7 @@ As you can see, you don't have any *Event* in the File Picker component. Click i
   
 ![](./images/vbs-app-evenactions-02.png)
   
-Now you should be in the *Action Chain Editor*. You can see the name of the Action, something like *CameraFilePickerSelectChain*. For academical reasons, you'll create an *If* logic action to verify that the userName and photoName components values are different from empty. You create before the *if-bind* components to verify those conditions, but you can practice here with *if-logic* action to compare with *if-bind* component.
+Now you should be in the *Action Chain Editor*. You can see the name of the Action, something like *CameraFilePickerSelectChain*. For academical reasons, you'll create an *If* logic action to verify that the userName and photoName components values are different that empty. You create before the *if-bind* components to verify those conditions, but you can practice here with *if-logic* action to compare with *if-bind* component.
   
 Drag and Drop the **if** *logic* action as your first action in the action chain.
   
@@ -501,11 +505,11 @@ Drag and Drop a **Fire Notification** action to the false branch.
   
 ![](./images/vbs-app-evenactions-06.gif)
   
-Click in the *Fire Notification* action to select it. In the Summary field you could write something like ```NoUserPhotoName```. Then in the Message field you can write some descriptive message like ```No file name correctly defined.``` or any other descriptive message to put on the screen when the **if-logic** action is **FALSE**. 
+Click in the *Fire Notification* action to select it. In the Summary field you could write something like ```NoUserPhotoName```. Then in the Message field you can write some descriptive message like ```No file name correctly defined.``` or whatever other message that you can put on the screen when the **if-logic** action is **FALSE**. 
   
 ![](./images/vbs-app-evenactions-07.png)
   
-You don't have to but an even more elaborated message could be something like:
+You could create a more elaborated message like:
   
 ```
   "No file name correctly defined. userName: " + $page.variables.userName + " photoName: " + $page.variables.photoName
@@ -529,7 +533,7 @@ Next click in the *Go to Module Function* link below the *Function Name* field t
   
 ![](./images/vbs-app-evenactions-12.png)
   
-This function will be used to convert the photo taken in your mobile phone as a *BLOB* object type to a *FILE* type. This js function will convert the blob/image to base64 string (data) and it'll create an URL to use in the **Image** component that you put in the mobile UI at the begining of the workshop. If you try to put the blob directly in the *Image* component you won't have anything as a blob type is an incompatible object type for that component.
+This function will be used to convert the photo taken in your mobile phone as a *BLOB* object type to a *FILE* type. This js function will convert the blob/image to base64 string (data) and it'll create an URL to use in the **Image** component that you put in the mobile UI at the begining of the workshop. If you try to put the blob directly in the *Image* component you won't have anything as blob type is an incompatible object type for that component.
   
 Now you have to copy and paste the next javascript code in the *JavaScript* editor.
   
@@ -577,11 +581,11 @@ Create the new variable imageURL. Click in *Variables* tab in the main menu edit
   
 ![](./images/vbs-app-evenactions-16.png)
   
-Click **+ Variable** button to create the new variable. Write a varaible name for the URL, like *imageURL* of **String** type. Then Click in **Create** Button to create the new variable.
+Click **+ Variable** button to create the new variable. Write a varaible name for the URL, like *imageURL* of **String** type. Then Click in **New** Button to create the new variable.
   
 ![](./images/vbs-app-evenactions-17.png)
   
-Now Click in the *Page Designer* tab to assign the new variable to the Image component. Select the **Image** component in the *Structure* tree as this component is hidden (you could select in the UI editor, but you should override the bind-if components. It's better to select it in the Structure tree).
+Now Click in the *Page Designer* tab to assign the new variable to the Image component. Select the **Image** component in the *Structure* tree as this component is hidden (you could select in the UI editor, but you should override the bind-if components. It's better select it in the Structure tree).
   
 ![](./images/vbs-app-evenactions-18.png)
   
@@ -611,7 +615,7 @@ Click in the **Save** button to save and return to the Actions editor.
   
 ![](./images/vbs-app-evenactions-23.png)
   
-Next you'll have to add a *Call Rest* action to use the **Service Connection** that you created in the last section of the workshop. This action will do a call rest to the OCI API to upload the photo to an Object Storage Bucket. The OCI Objetc Storage bucket is called vbcs-takephoto-workshop.
+Next you'll have to add a *Call Rest* action to use the **Service Connection** that you created in the last section of the workshop. This action will do a call rest to the OCI API to upload the photo to an Object Storage Bucket. If you didn't create any OCI Objetc Storage bucket at the begining of the workshop, the trainers will give you an Object Storage bucket name to use in this part of the workshop.
   
 You have to drag and drop a **Call REST** action below the *Assign Variable* action in the workflow.
   
@@ -631,20 +635,20 @@ Click in the **Assign** link of the *Input Parameters* Endpoint property to open
   
 ![](./images/vbs-app-evenactions-27.png)
   
-You must assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor. Check the editor type (at the right of the writting part) for each value, because it could be *Static Content* and *Expression*.
+You must to assign values to the Target *uriParams*. Click in each Target parameter to assign values in the below editor. Check the editor type (at the right of the writting part) for each value, because it could be *Static Content* and *Expression*.
 
-|Param|Value|Type|Value|
+|Param|Value|Type||
 |--|--|--|--|
-|buckerName|your Object Storage Bucket name|Static Content|vbcs-takephoto-workshop|
-|namespaceName|your Object Storage Tenancy namespace|Static Content|oractdemeaoci|
+|bucketName|your Object Storage Bucket name|Static Content|[how to create a bucket in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20create%20Object%20Storage%20Bucket.md)|
+|namespaceName|your Object Storage Tenancy namespace|Static Content|[OS namespace in OCI](https://github.com/oraclespainpresales/WorkshopVBCS-Takephoto/blob/main/00/how%20to%20get%20Object%20Storage%20Namespace.md)|
 |objectName| $page.variables.userName + "-" + $page.variables.photoName + "-" + $variables.files[0].name|Expression||
   
 You can click in the *uriParam* parameter to review your values. You should see an object in JSON notation.
   
 ```json
 {
- "bucketName": "vbcs-takephoto-workshop",
- "namespaceName": "oractdemeaoci",
+ "bucketName": "your_backet_name",
+ "namespaceName": "your_object_storage_namespace",
  "objectName": "{{ $page.variables.userName + \"-\" + $page.variables.photoName + \"-\" + $variables.files[0].name }}"
 }
 ```
@@ -653,7 +657,7 @@ Next click **Save** button to return to the *Actions Chain* editor.
   
 ![](./images/vbs-app-evenactions-28.png)
   
-Now the *Input Paramters* should be showed as mapped. But you have to send the photo file too. You can read in the [API description](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/Object/PutObject) that in the **PutObject** call you must add the image file (as binary String) in the body of the call. Let's map the photo file to the body parameter.
+Now the *Input Parameters* should be showed as mapped. But you have to send the photo file too. You can read in the [API description](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/Object/PutObject) that in the **PutObject** call you must add the image file (as binary String) in the body of the call. Let's map the photo file to the body parameter.
   
 Click in the **Assign** link of the *Parameters* property to access to the Assign Parameters Editor.
   
@@ -756,11 +760,11 @@ Once you have configured the mobile application in Oracle Visual Builder with th
 * iOS application
 * Progressive web application (PWA)
   
-For Android and iOS applications, you must define a build configuration before Oracle Visual Builder can build the mobile application for you (out of the scope of this worksho. You have more information about deploying native mobile application [here](https://docs.oracle.com/en/solutions/visual-builder-application-photos-to-content-experience-cloud/publish-mobile-application-oracle-visual-builder-vbcec1.html#GUID-6C813F64-6C74-4B50-9451-BC5CEC730122)). For a PWA, you must enable PWA in the PWA tab of the mobile app's Settings page. Once you complete the appropriate prerequisites, Oracle Visual Builder builds the mobile application you want.
+For Android and iOS applications, you must define a build configuration before Oracle Visual Builder can build the mobile application for you (out of the scope of this workshop. You have more information about deploying native mobile application [here](https://docs.oracle.com/en/solutions/visual-builder-application-photos-to-content-experience-cloud/publish-mobile-application-oracle-visual-builder-vbcec1.html#GUID-6C813F64-6C74-4B50-9451-BC5CEC730122)). For a PWA, you must enable PWA in the PWA tab of the mobile app's Settings page. Once you complete the appropriate prerequisites, Oracle Visual Builder builds the mobile application you want.
   
 When a mobile app with PWA support enabled is deployed using Oracle Visual Builder, the application runs as a web app and not as a native mobile app. End users access the app by navigating to the URL where the application is published.
   
-Visual Builder has it own environment to deploy and test your PWA mobile application. With Visual Builder you can test your mobile application reading a QR image that will open the mobile web app in your mobile phone. Once tested you can publish it, in a simple way, to a Visual Builder production environment.
+Visual Builder has its own environment to deploy and test your PWA mobile application. With Visual Builder you can test your mobile application reading a QR image that will open the mobile web app in your mobile phone. Once tested you can publish it, in a simple way, to a Visual Builder production environment.
   
 In this section you'll test your PWA mobile application in your own mobile phone (if you have one of course).
 ---
@@ -816,6 +820,4 @@ Finally test the application writing your name, a name for the photo and take a 
   
 ![](./images/vbs-app-test-11.gif)
   
-Enjoy your app! 
-Thank you!
 </details>
