@@ -85,9 +85,49 @@ In this lab, you will:
 * GitHub account
 
 ## Task 0: Create Project
-Create Notification topic
-Create LogGroup
-Create Project
+1. Create Notification topic
+
+Go to OCI Cloud Console -> Click OCI Navigation Menu -> Developer Services -> Application Integration -> Notifications
+
+Click on Create Topic.
+Please provide the Name and Description for your Topic.
+Click Create 
+
+![devops notification topic](./images/devops-NotificationTopic.png)
+
+2. Create LogGroup
+
+Go to OCI Navigation Menu -> Observability & Management Logging -> Log Groups
+Click on Create Log Groups 
+Select your Compartment
+Name of the Log Group
+Please provide description of the Log Group.
+and Click Create. 
+
+![devops LogGroups](./images/devops-LogGroup.png)
+
+3. Create Project
+
+Go to OCI Navigation Menu -> Developer Services -> DevOps -> Projects. 
+
+The project name should start with hello_<yourinitals> like for me its hello_hk. Provide some meaningful description to the project. Click on change topic and select your compartment and the topic you recently created for this project. Click on the Select topic and finally click on Create DevOps Project. 
+ 
+ ![devops_project_creation](./images/devops-projectcreate.png)
+
+ 4. Creating Environment 
+ 
+ Click on the DevOps Projects you recently created. Go to the Environments. On Basic Information select Oracle Kubernetes Engine. Provide some Name like Environment for Devops. Provide some Description like Enviroment for DevOps Project.
+ 
+ Click Next
+ 
+ Select the Region on your Kubernetes Cluster. Choose you compartment and the Kubernetes Cluster you have created in your previous Lab.
+ 
+ Click Create Environment
+ 
+ ![devops_env2](./images/devops-envcreation2.png) 
+
+ ![devops_env1](./images/devops-envcreation1.png)
+ 
 
 ## Task 1: Create Artifacts
 
@@ -383,7 +423,8 @@ This is going to publish multiple artifacts to our OKE environment.
 
     ![nats stage pipeline](./images/nats-stage-pipeline.png)
 
-1. Finally, we are going to create a stage for the fulfillment service. Click on the plus sign underneath fulfillment-deployment, then Add Stage.
+1. Finally, we are going to create a stage for the fulfillment service. Click on the plus sign underneath fulfillment-deployment, then Add Stage. Please select the Add Stage Tag here
+ 
     ![fulfillment service new stage](./images/fulfillment-service-new-stage.png)
 
 1. Next, Select `OKE:Default (Apply manifest to your Kubernetes cluster)` and click Next.
