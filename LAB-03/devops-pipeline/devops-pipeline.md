@@ -114,7 +114,26 @@ The project name should start with hello_<yourinitals> like for me its hello_hk.
  
  ![devops_project_creation](./images/devops-projectcreate.png)
 
- 4. Creating Environment 
+4. Enable Logs on the Project
+
+Inside the DevOps Projects you recently created. Click on the Enable Logs button.
+
+ ![devops_project_enable_logs1](./images/devops_project_enable_log1.png)
+ 
+ Toggle the Enable Logs button
+ 
+ ![devops_project_enable_logs2](./images/devops_project_enable_log2.png)
+
+ Select your Log Group and click Enable Logs button
+ 
+ ![devops_project_enable_logs3](./images/devops_project_enable_log3.png) 
+ 
+ Your DevOps Logs should be Active
+ 
+ ![devops_project_enable_logs4](./images/devops_project_enable_log4.png) 
+ 
+ 
+5. Creating Environment 
  
  Click on the DevOps Projects you recently created. Go to the Environments. On Basic Information select Oracle Kubernetes Engine. Provide some Name like Environment for Devops. Provide some Description like Enviroment for DevOps Project.
  
