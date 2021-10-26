@@ -4,7 +4,7 @@ In this series of labs we will focus on the specific features of Kubernetes to r
 This workshop also covers ways to automate your release process with DevOps pipelines.
 These labs use a pre-built set of docker images.
 
-![Oracle Container Engine for Kubernetes (OKE)](./images/oke_architecture.png)
+![Oracle Container Engine for Kubernetes (OKE)](./images/oke_archiitecture.png)
 
 # Deploying microservices in Kubernetes (Duration: +/- 2 hours)
 In this lab, you will look at how to use OKE for increased availability and automatic scaling, as well as online rollouts of new software versions.
