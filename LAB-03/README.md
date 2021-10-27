@@ -17,8 +17,8 @@ In this lab, you will look at how to use OKE for increased availability and auto
 
 ![What you will build in this lab](./images/architecture-overview.png)
 
-# Kubernetes Instructions [here](https://oracle.github.io/cloudtestdrive/AppDev/cloud-native/livelabs/individual/kubernetes/kubernetes-core/index.html?lab=kubernetes-core)
-
+# Kubernetes Instructions - short version [here](https://github.com/OCI-CEE/OCI-Handson-week-2021/blob/main/LAB-03/instructions.md)
+# Kubernetes Instructions - long version [here](https://oracle.github.io/cloudtestdrive/AppDev/cloud-native/livelabs/individual/kubernetes/kubernetes-core/index.html?lab=kubernetes-core)
 
 # Continuous Deployment with OCI DevOps Pipeline (Duration: +/- 30 minutes)
 In this lab, you will:
